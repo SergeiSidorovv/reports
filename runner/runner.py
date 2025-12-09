@@ -1,7 +1,7 @@
 import tabulate
 
 from report.work_reports import ReportFactory
-from work_files import CSVWorker
+from work_files.work_files import CSVWorker
 
 
 class ReportRunner:

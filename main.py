@@ -1,5 +1,5 @@
-from parser_arguments import CLI
-from runner import ReportRunner
+from parser.parser_arguments import CLI
+from runner.runner import ReportRunner
 
      
 def main():
