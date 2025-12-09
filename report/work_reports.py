@@ -1,12 +1,22 @@
 from report.models_report import PerformanceReport
 
 
-def get_report(name_report: str) -> dict:
+class ReportFactory:
+    """
+    Factory for creating reports
+    """
     reports = {
         "performance": PerformanceReport(),
     }
 
-    if name_report not in reports:
-        raise ValueError(f"Unknown report: {name_report}")
 
-    return reports[name_report]
+    @classmethod
+    def create_report(cls, report_name: str) -> object:
+        """
+        Creates a report
+        :param name_report: The name of the report
+        :return: The report object
+        """
+        if report_name not in cls.reports:
+            raise ValueError(f"Unknown report: {report_name}")
+        return cls.reports[report_name]

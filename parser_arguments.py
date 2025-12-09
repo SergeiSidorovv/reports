@@ -1,21 +1,30 @@
 from argparse import ArgumentParser, Namespace
 
 
-def parser_arguments() -> Namespace:
-    parser = ArgumentParser(description="Report generator")
+class CLI:
+    """
+    Class for parsing command line arguments
+    """
+    def __init__(self):
+        self.parser = ArgumentParser(description="Report generatorr")
 
-    parser.add_argument(
-        "--files",
-        nargs="+",
-        required=True,
-        help="Path to the reports"
-    )
+        self.parser.add_argument(
+            "--files",
+            required=True,
+            nargs="+",
+            help="Path to the reports"
+        )
+        self.parser.add_argument(
+            "--report",
+            required=True,
+            help="Name report"
+        )
 
-    parser.add_argument(
-        "--report",
-        required=True,
-        help="Name report"
-    )
 
-    parser_namespace = parser.parse_args()
-    return parser_namespace
+    def parse(self) -> Namespace:
+        """
+        Selects the names of the arguments from the received command
+        :return: The name of the command and the paths to search for files
+        """
+        parser_namespace = self.parser.parse_args()
+        return parser_namespace
