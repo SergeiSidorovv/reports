@@ -17,3 +17,4 @@ def read_files(file_paths: list) -> list:
             logging.info(f"{path} is not read. Exception: {e}")
 
     return rows
+    
