@@ -19,5 +19,3 @@ class TestCLI:
             "b.txt",
         ]
         assert arguments.report == "monthly"
-
-    

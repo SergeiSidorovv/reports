@@ -59,6 +59,17 @@ def paremeters_report_factory():
     return data
 
 
+@pytest.fixture
+def file_paths():
+    data = ['employess.csv', 'employess2.csv']
+    return data
+
+
+@pytest.fixture
+def report_name():
+    data = 'performance'
+    return data
+
 
 @pytest.fixture
 def rows_employess2():

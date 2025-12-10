@@ -15,7 +15,6 @@ class PerformanceReport:
         :return: Position name and average value
         """
         performance_by_position = defaultdict(list)
-        print(rows)
         for row in rows:
             position = row["position"]
             performance = float(row["performance"])
