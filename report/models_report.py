@@ -5,8 +5,8 @@ class PerformanceReport:
     """
     Class for generating performance reports
     """
-    parameters = ["position", "performance"]
 
+    parameters = ["position", "performance"]
 
     def generate_report(self, rows: list) -> list:
         """
@@ -15,14 +15,14 @@ class PerformanceReport:
         :return: Position name and average value
         """
         performance_by_position = defaultdict(list)
+        print(rows)
         for row in rows:
-            position = row['position']
-            performance = float(row['performance'])
-            performance_by_position[position].append(performance) 
+            position = row["position"]
+            performance = float(row["performance"])
+            performance_by_position[position].append(performance)
 
         report_data = self.set_average_performance(performance_by_position)
         return report_data
-
 
     @staticmethod
     def set_average_performance(performance_by_position: defaultdict) -> list:

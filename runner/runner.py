@@ -8,10 +8,10 @@ class ReportRunner:
     """
     Class for generating reports
     """
+
     def __init__(self, file_paths, report_name):
         self.reader = CSVWorker(file_paths)
         self.report = ReportFactory.create_report(report_name)
-
 
     def run(self):
         """
@@ -21,7 +21,6 @@ class ReportRunner:
         rows = self.reader.read_files()
         result = self.report.generate_report(rows)
         self.render(result, headers)
-
 
     @staticmethod
     def render(data: list, headers: list):

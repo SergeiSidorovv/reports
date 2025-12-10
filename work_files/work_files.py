@@ -6,9 +6,9 @@ class CSVWorker:
     """
     A class for working with CSV files
     """
+
     def __init__(self, file_paths: list):
         self.file_paths = file_paths
-
 
     def read_files(self) -> list:
         """

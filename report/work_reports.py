@@ -5,10 +5,10 @@ class ReportFactory:
     """
     Factory for creating reports
     """
+
     reports = {
         "performance": PerformanceReport(),
     }
-
 
     @classmethod
     def create_report(cls, report_name: str) -> object:

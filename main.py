@@ -1,7 +1,7 @@
 from parser.parser_arguments import CLI
 from runner.runner import ReportRunner
 
-     
+
 def main():
     cli = CLI()
     args = cli.parse()

@@ -5,21 +5,14 @@ class CLI:
     """
     Class for parsing command line arguments
     """
+
     def __init__(self):
         self.parser = ArgumentParser(description="Report generatorr")
 
         self.parser.add_argument(
-            "--files",
-            required=True,
-            nargs="+",
-            help="Path to the reports"
+            "--files", required=True, nargs="+", help="Path to the reports"
         )
-        self.parser.add_argument(
-            "--report",
-            required=True,
-            help="Name report"
-        )
-
+        self.parser.add_argument("--report", required=True, help="Name report")
 
     def parse(self) -> Namespace:
         """
