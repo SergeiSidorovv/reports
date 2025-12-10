@@ -7,7 +7,9 @@ class CLI:
     """
 
     def __init__(self):
-        self.parser = ArgumentParser(description="Report generatorr")
+        self.parser = ArgumentParser(
+            description="Report generatorr", allow_abbrev=False
+        )
 
         self.parser.add_argument(
             "--files", required=True, nargs="+", help="Path to the reports"
