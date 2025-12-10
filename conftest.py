@@ -1,4 +1,5 @@
 import pytest
+from argparse import ArgumentParser
 
 from report.models_report import PerformanceReport
 from report.work_reports import ReportFactory
@@ -56,6 +57,7 @@ def paremeters_report_factory():
         "performance": PerformanceReport(),
     }
     return data
+
 
 
 @pytest.fixture
